@@ -1,6 +1,6 @@
 {
   "name": "@monitor-txs/client-monitor-sdk",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Клиентский SDK для работы с ChainPing Monitor TXS API",
   "private": false,
   "main": "dist/index.js",
