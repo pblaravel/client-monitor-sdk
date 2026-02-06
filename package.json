@@ -1,0 +1,21 @@
+{
+  "name": "@monitor-txs/client-monitor-sdk",
+  "version": "0.0.1",
+  "description": "Клиентский SDK для работы с ChainPing Monitor TXS API",
+  "private": false,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "clean": "rm -rf dist",
+    "lint": "echo \"TODO: добавить линтинг для @monitor-txs/client-monitor-sdk\""
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}
