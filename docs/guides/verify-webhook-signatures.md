@@ -27,7 +27,7 @@ If no active key has a signing secret, the header is omitted.
 import {
   parseWebhookPayload,
   verifyWebhookSignature,
-} from '@monitor-txs/client-monitor-sdk';
+} from '@chainmonitor/client-monitor-sdk';
 
 const valid = verifyWebhookSignature({
   rawBody, // Buffer | Uint8Array | string of the exact bytes
@@ -48,7 +48,7 @@ The helper lowercases the header, splits on commas, and compares with `crypto.ti
 
 ```ts
 import express from 'express';
-import { verifyWebhookSignature, parseWebhookPayload } from '@monitor-txs/client-monitor-sdk';
+import { verifyWebhookSignature, parseWebhookPayload } from '@chainmonitor/client-monitor-sdk';
 
 const app = express();
 
