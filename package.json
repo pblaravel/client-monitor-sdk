@@ -1,5 +1,5 @@
 {
-  "name": "@monitor-txs/client-monitor-sdk",
+  "name": "@chainmonitor/client-monitor-sdk",
   "version": "1.1.0",
   "description": "TypeScript/JavaScript client SDK for Chain Monitor — credit-based blockchain monitoring with HMAC-signed webhooks and Telegram alerts.",
   "private": false,
@@ -14,12 +14,19 @@
     "build": "tsc -p tsconfig.json",
     "clean": "rm -rf dist",
     "lint": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.test.json",
-    "test": "tsx --test test/**/*.test.ts"
+    "test": "tsx --test test/**/*.test.ts",
+    "prepare": "npm run build"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "keywords": [
     "chain-monitor",
     "blockchain",
     "webhook",
+    "webhooks",
+    "crypto-payments",
+    "wallet-monitoring",
     "ethereum",
     "bsc",
     "polygon",

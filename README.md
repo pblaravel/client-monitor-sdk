@@ -1,4 +1,4 @@
-# @monitor-txs/client-monitor-sdk
+# @chainmonitor/client-monitor-sdk
 
 TypeScript/JavaScript client for **[Chain Monitor](https://chain-monitor.online)** — a credit-based blockchain monitoring service. Watch public wallets and smart contracts on Ethereum, BSC, Polygon, TRON, Solana, Sui, opBNB and other live networks. Matching transfers are delivered as **HMAC-signed webhooks** or **Telegram** alerts after they appear on-chain.
 
@@ -21,13 +21,19 @@ New accounts receive **1000 free credits**. **1 credit = 1 delivered alert**. Qu
 ## Install
 
 ```bash
-npm install @monitor-txs/client-monitor-sdk
+npm install @chainmonitor/client-monitor-sdk
+```
+
+From GitHub (the `prepare` script builds `dist/` after clone):
+
+```bash
+npm install github:pblaravel/client-monitor-sdk
 ```
 
 ## Quickstart
 
 ```ts
-import { MonitorTxsClient, requireNetwork, requireToken } from '@monitor-txs/client-monitor-sdk';
+import { MonitorTxsClient, requireNetwork, requireToken } from '@chainmonitor/client-monitor-sdk';
 
 const client = new MonitorTxsClient({ apiKey: process.env.CHAIN_MONITOR_API_KEY });
 
@@ -47,7 +53,7 @@ await client.wallets.create({
 Create the API key in **Dashboard → API** (`Authorization: Bearer api_key_…`). The pairing webhook secret (`whsec_…`) is shown once — store it for signature verification.
 
 ```ts
-import { parseWebhookPayload, verifyWebhookSignature } from '@monitor-txs/client-monitor-sdk';
+import { parseWebhookPayload, verifyWebhookSignature } from '@chainmonitor/client-monitor-sdk';
 
 const ok = verifyWebhookSignature({
   rawBody, // exact bytes, not JSON.stringify(parsed)
@@ -197,3 +203,9 @@ Dashboard/JWT routes documented on [smart contract monitoring](https://chain-mon
 
 - Node.js 18+
 - TypeScript 5+
+
+## Releasing
+
+1. Bump `version` in `package.json` (and note it in `CHANGELOG.md`).
+2. Create a GitHub release tagged `vX.Y.Z` (for example `v1.1.0`).
+3. Publishing to npm runs automatically. If that version already exists on the registry, the publish step is skipped.

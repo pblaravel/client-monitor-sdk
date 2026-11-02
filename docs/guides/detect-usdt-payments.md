@@ -16,7 +16,7 @@ One credit is spent per delivered alert. Quiet wallets do not spend credits.
 Do not hard-code UUIDs. Load them from `GET /public/networks`:
 
 ```ts
-import { MonitorTxsClient, requireNetwork, requireToken } from '@monitor-txs/client-monitor-sdk';
+import { MonitorTxsClient, requireNetwork, requireToken } from '@chainmonitor/client-monitor-sdk';
 
 const client = new MonitorTxsClient({ apiKey: process.env.CHAIN_MONITOR_API_KEY });
 const networks = await client.public.getNetworks();
@@ -55,7 +55,7 @@ import {
   isConfirmedEvent,
   parseWebhookPayload,
   verifyWebhookSignature,
-} from '@monitor-txs/client-monitor-sdk';
+} from '@chainmonitor/client-monitor-sdk';
 
 if (!verifyWebhookSignature({ rawBody, signatureHeader, secret })) {
   throw new Error('invalid signature');

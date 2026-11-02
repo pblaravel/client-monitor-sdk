@@ -17,6 +17,7 @@ Aligns the SDK with the current Chain Monitor API ([docs](https://chain-monitor.
 
 ### Changed
 
+- Published package name is `@chainmonitor/client-monitor-sdk` (npm and GitHub).
 - Documented auth is an API key (`Bearer api_key_…`) from Dashboard → API. `authToken` still works (dashboard JWT or API key).
 - Wallet and notification methods are versioned: `/v1/…` when the token starts with `api_key_`. JWT tokens keep the unversioned paths.
 - Default types for wallets, notifications, balance, and profile are no longer `unknown`.

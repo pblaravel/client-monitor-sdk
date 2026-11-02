@@ -1,6 +1,6 @@
 # Examples
 
-Runnable scripts for [@monitor-txs/client-monitor-sdk](https://github.com/pblaravel/client-monitor-sdk). Create an API key in [Dashboard → API](https://chain-monitor.online) and a webhook signing secret (`whsec_…`) if you receive webhooks.
+Runnable scripts for [@chainmonitor/client-monitor-sdk](https://github.com/pblaravel/client-monitor-sdk). Create an API key in [Dashboard → API](https://chain-monitor.online) and a webhook signing secret (`whsec_…`) if you receive webhooks.
 
 ```bash
 npm install

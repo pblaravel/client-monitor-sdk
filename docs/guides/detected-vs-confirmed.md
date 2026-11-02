@@ -31,7 +31,7 @@ Credit on **`transaction_confirmed`**.
 That event waits for the network’s confirmation depth. The JSON includes `confirmations` and `requiredConfirmations` so you can log what the service considered final.
 
 ```ts
-import { isConfirmedEvent, parseWebhookPayload } from '@monitor-txs/client-monitor-sdk';
+import { isConfirmedEvent, parseWebhookPayload } from '@chainmonitor/client-monitor-sdk';
 
 const payload = parseWebhookPayload(rawBody);
 
