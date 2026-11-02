@@ -1,21 +1,50 @@
 {
   "name": "@monitor-txs/client-monitor-sdk",
-  "version": "1.0.0",
-  "description": "Клиентский SDK для работы с ChainPing Monitor TXS API",
+  "version": "1.1.0",
+  "description": "TypeScript/JavaScript client SDK for Chain Monitor — credit-based blockchain monitoring with HMAC-signed webhooks and Telegram alerts.",
   "private": false,
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist",
-    "README.md"
+    "README.md",
+    "CHANGELOG.md"
   ],
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "clean": "rm -rf dist",
-    "lint": "echo \"TODO: добавить линтинг для @monitor-txs/client-monitor-sdk\""
+    "lint": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.test.json",
+    "test": "tsx --test test/**/*.test.ts"
+  },
+  "keywords": [
+    "chain-monitor",
+    "blockchain",
+    "webhook",
+    "ethereum",
+    "bsc",
+    "polygon",
+    "tron",
+    "trc20",
+    "erc20",
+    "usdt",
+    "solana",
+    "sui"
+  ],
+  "homepage": "https://chain-monitor.online",
+  "bugs": {
+    "url": "https://github.com/pblaravel/client-monitor-sdk/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pblaravel/client-monitor-sdk.git"
+  },
+  "engines": {
+    "node": ">=18"
   },
   "license": "UNLICENSED",
   "devDependencies": {
-    "typescript": "^5.3.3"
+    "@types/node": "^24.19.2",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3"
   }
 }
